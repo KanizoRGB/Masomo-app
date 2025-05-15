@@ -1,8 +1,13 @@
 /********** Template CSS **********/
-:root {
+/* :root {
     --primary: #00B98E;
     --light: #F3F6F8;
     --dark: #0E2E50;
+} */
+:root {
+    --primary: #fccb5a;
+    --light: #F3F6F8;
+    --dark: #193986;
 }
 
 
