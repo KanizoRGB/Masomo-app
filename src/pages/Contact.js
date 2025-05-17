@@ -7,7 +7,7 @@ function Contact() {
 <div className="container-xxl py-6">
   <div className="container">
     <div className="mx-auto text-center wow fadeInUp" data-wow-delay="0.1s" style={{maxWidth: 600}}>
-      <div className="d-inline-block border rounded-pill text-primary px-4 mt-3 mb-3">Contact Us</div>
+      <div className="d-inline-block border rounded-pill px-4 mt-3 mb-3" style={{color:"rgb(248, 185, 32)"}}>Contact Us</div>
       <h2 className="mb-5">If You Have Any Query, Please Feel Free Contact Us</h2>
     </div>
     <div className="row justify-content-center">
@@ -40,7 +40,7 @@ function Contact() {
               </div>
             </div>
             <div className="col-12">
-              <button className="btn btn-primary w-100 py-3" type="submit">Send Message</button>
+              <button className="btn w-100 py-3" style={{backgroundColor:"rgb(248, 185, 32)"}} type="submit">Send Message</button>
             </div>
           </div>
         </form>

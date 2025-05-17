@@ -1,9 +1,9 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
+import { Link,NavLink } from 'react-router-dom';
 
 function Header() {
 
-  //Taraji Yellow color #F8B920
+  //Taraji Yellow color rgb(248, 185, 32)
   //Taraji Blue color rgb(56, 77, 125)
   return (
     <div>
@@ -22,27 +22,13 @@ function Header() {
     </button>
     <div className="collapse navbar-collapse" id="navbarCollapse">
       <div className="navbar-nav ms-auto py-0">
-        <Link to="/" className="nav-item nav-link active">Home</Link>
-        <Link to="/about" className="nav-item nav-link">About</Link>
-        <Link to="/services" className="nav-item nav-link">Service</Link>
-        <Link to="/blogs" className="nav-item nav-link">Blogs</Link>
-        {/* <a href="index.html" className="nav-item nav-link active">Home</a> */}
-        {/* <a href="about.html" className="nav-item nav-link">About</a> */}
-        {/* <a href="service.html" className="nav-item nav-link">Service</a> */}
-        {/* <a href="service.html" className="nav-item nav-link">Blogs</a> */}
-        {/* <div className="nav-item dropdown">
-          <a href="#" className="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-          <div className="dropdown-menu m-0">
-            <a href="feature.html" className="dropdown-item">Features</a>
-            <a href="quote.html" className="dropdown-item">Free Quote</a>
-            <a href="team.html" className="dropdown-item">Our Team</a>
-            <a href="testimonial.html" className="dropdown-item">Testimonial</a>
-            <a href="404.html" className="dropdown-item">404 Page</a>
-          </div>
-        </div> */}
-        <a href="contact.html" className="nav-item nav-link">Contact</a>
+        <NavLink to="/" className="nav-item nav-link ">Home</NavLink>
+        <NavLink to="/about" className="nav-item nav-link">About</NavLink>
+        <NavLink to="/services" className="nav-item nav-link">Service</NavLink>
+        <NavLink to="/blogs" className="nav-item nav-link">Blogs</NavLink>
+        <NavLink to="/contact" className="nav-item nav-link">Contact</NavLink>
       </div>
-      <a href className="btn btn-light rounded-pill py-2 px-4 ms-lg-5" style={{color:"rgb(56, 77, 125);"}}>Free Quote</a>
+      <a href className="btn btn-light rounded-pill py-2 px-4 ms-lg-5" style={{color:"rgb(56, 77, 125);"}}>Apply Now</a>
     </div>
   </nav>
   {/* <div className="container-xxl bg-primary hero-header">
