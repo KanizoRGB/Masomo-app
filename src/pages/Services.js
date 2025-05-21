@@ -1,4 +1,6 @@
+// import { Carousel } from 'bootstrap';
 import React from 'react'
+import Carousel from 'react-bootstrap/Carousel';
 
 function Services() {
   return (
@@ -8,7 +10,7 @@ function Services() {
   <div className="container-xxl py-6">
     <div className="container">
       <div className="mx-auto text-center wow fadeInUp" data-wow-delay="0.1s" style={{maxWidth: 600}}>
-        <div className="d-inline-block border rounded-pill px-4 mt-3 mb-3" style={{color:"rgb(56, 77, 125)"}}>Our Services</div>
+        <div className="d-inline-block border rounded-pill px-4 mt-3 mb-3" style={{color:"rgb(248, 185, 32)"}}>Our Services</div>
         <h2 className="mb-5">We Sort Your Academic needs</h2>
       </div>
       <div className="row g-4">
@@ -113,13 +115,56 @@ function Services() {
   </div>
   {/* Service End */}
 
-   <div className="container-xxl py-6">
+   {/* Testimonial Start */}
+
+     
+
+    
+  
+<div className="container-xxl py-6">
   <div className="container">
     <div className="mx-auto text-center wow fadeInUp" data-wow-delay="0.1s" style={{maxWidth: 600}}>
-      <div className="d-inline-block border rounded-pill px-4 mt-3 mb-3" style={{color:"rgb(248, 185, 32)"}}>Testimonial</div>
+      <div className="d-inline-block border rounded-pill px-4 mb-3" style={{color:"rgb(248, 185, 32)"}}>Testimonial</div>
       <h2 className="mb-5">What Our Clients Say!</h2>
     </div>
-    <div className="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
+    <div id="carouselExampleInterval" className="carousel slide p-5" data-bs-ride="carousel">
+      <div className="carousel-inner">
+        <div className="carousel-item active" data-bs-interval={5000}>
+          <div className='d-flex justify-content-center'>
+            <img src="img/testimonial-1.jpg" className="rounded-circle" alt="..." />
+            <h1 className='pt-4 mb-0'> Myra Smith</h1>
+          </div>
+          <h2>Occupation Therapist 1</h2>
+          <p>Taraji Masomo Care provided me with exceptional support throughout my study abroad journey. Their team was knowledgeable, responsive, and genuinely cared about my success. I couldn't have done it without them!</p>
+        </div>
+        <div className="carousel-item " data-bs-interval={5000}>
+          <div className='d-flex justify-content-center'>
+            <img src="img/testimonial-2.jpg" className="rounded-circle" alt="..." />
+            <h1 className='pt-4 mb-0'> Myra Smith</h1>
+          </div>
+          <h2>Occupation Therapist 2</h2>
+          <p>Taraji Masomo Care provided me with exceptional support throughout my study abroad journey. Their team was knowledgeable, responsive, and genuinely cared about my success. I couldn't have done it without them!</p>
+        </div>
+        <div className="carousel-item " data-bs-interval={5000}>
+          <div className='d-flex justify-content-center'>
+            <img src="img/testimonial-3.jpg" className="rounded-circle" alt="..." />
+            <h1 className='pt-4 mb-0'> Myra Smith</h1>
+          </div>
+          <h2>Occupation Therapist 3</h2>
+          <p>Taraji Masomo Care provided me with exceptional support throughout my study abroad journey. Their team was knowledgeable, responsive, and genuinely cared about my success. I couldn't have done it without them!</p>
+        </div>
+       
+      </div>
+      <button className="carousel-control-prev text-dark" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span className="carousel-control-prev-icon text-primary" aria-hidden="true" />
+        <span className="visually-hidden">Previous</span>
+      </button>
+      <button className="carousel-control-next text-dark" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
+        <span className="carousel-control-next-icon text-primary" aria-hidden="true" />
+        <span className="visually-hidden">Next</span>
+      </button>
+    </div>
+    {/* <div className=" testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">
       <div className="testimonial-item rounded p-4">
         <i className="fa fa-quote-left fa-2x text-primary mb-3" />
         <p>Dolor et eos labore, stet justo sed est sed. Diam sed sed dolor stet amet eirmod eos labore diam</p>
@@ -164,9 +209,11 @@ function Services() {
           </div>
         </div>
       </div>
-    </div>
+    </div> */}
   </div>
 </div>
+{/* Testimonial End */}
+
 
     </div>
   )

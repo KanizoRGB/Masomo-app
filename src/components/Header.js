@@ -24,7 +24,7 @@ function Header() {
       <div className="navbar-nav ms-auto py-0">
         <NavLink to="/" className="nav-item nav-link ">Home</NavLink>
         <NavLink to="/about" className="nav-item nav-link">About</NavLink>
-        <NavLink to="/services" className="nav-item nav-link">Service</NavLink>
+        <NavLink to="/services" className="nav-item nav-link">Services</NavLink>
         <NavLink to="/blogs" className="nav-item nav-link">Blogs</NavLink>
         <NavLink to="/contact" className="nav-item nav-link">Contact</NavLink>
       </div>

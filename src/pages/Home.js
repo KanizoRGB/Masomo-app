@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Home() {
   return (
@@ -8,8 +9,8 @@ function Home() {
           <div className="row g-5 align-items-center">
             <div className="col-lg-6 text-center text-lg-start">
               <h1 className="text-white mb-4 animated zoomIn">Turn Your Dream of Studying,into Reality</h1>
-              <p className="text-white pb-3 animated zoomIn">Tempor rebum no at dolore lorem clita rebum rebum ipsum rebum stet dolor sed justo kasd. Ut dolor sed magna dolor sea diam. Sit diam sit justo amet ipsum vero ipsum clita lorem</p>
-              <a href className="btn btn-outline-light rounded-pill border-2 py-3 px-5 animated slideInRight">Learn More</a>
+              <p className="text-white pb-3 animated zoomIn">Taraji Masomo Care is an innovative education consultancy dedicated to empowering students across Africa by providing access to global academic opportunities. </p>
+              <Link to='/about' className="btn btn-outline-light rounded-pill border-2 py-3 px-5 animated slideInRight">Learn More</Link>
             </div>
             <div className="col-lg-6 text-center text-lg-start">
             {/* <img className="img-fluid animated zoomIn" src="img/hero.png" alt /> */}
