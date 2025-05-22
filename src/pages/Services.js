@@ -132,35 +132,35 @@ function Services() {
         <div className="carousel-item active" data-bs-interval={5000}>
           <div className='d-flex justify-content-center'>
             <img src="img/testimonial-1.jpg" className="rounded-circle" alt="..." />
-            <h1 className='pt-4 mb-0'> Myra Smith</h1>
+            <h3 className='pt-4 mb-0'> Myra Smith</h3>
           </div>
-          <h2>Occupation Therapist 1</h2>
+          <h3>Occupation Therapist 1</h3>
           <p>Taraji Masomo Care provided me with exceptional support throughout my study abroad journey. Their team was knowledgeable, responsive, and genuinely cared about my success. I couldn't have done it without them!</p>
         </div>
         <div className="carousel-item " data-bs-interval={5000}>
           <div className='d-flex justify-content-center'>
             <img src="img/testimonial-2.jpg" className="rounded-circle" alt="..." />
-            <h1 className='pt-4 mb-0'> Myra Smith</h1>
+            <h3 className='pt-4 mb-0'> Myra Smith</h3>
           </div>
-          <h2>Occupation Therapist 2</h2>
+          <h3>Occupation Therapist 2</h3>
           <p>Taraji Masomo Care provided me with exceptional support throughout my study abroad journey. Their team was knowledgeable, responsive, and genuinely cared about my success. I couldn't have done it without them!</p>
         </div>
         <div className="carousel-item " data-bs-interval={5000}>
           <div className='d-flex justify-content-center'>
             <img src="img/testimonial-3.jpg" className="rounded-circle" alt="..." />
-            <h1 className='pt-4 mb-0'> Myra Smith</h1>
+            <h3 className='pt-4 mb-0'> Myra Smith</h3>
           </div>
-          <h2>Occupation Therapist 3</h2>
+          <h3>Occupation Therapist 3</h3>
           <p>Taraji Masomo Care provided me with exceptional support throughout my study abroad journey. Their team was knowledgeable, responsive, and genuinely cared about my success. I couldn't have done it without them!</p>
         </div>
        
       </div>
-      <button className="carousel-control-prev text-dark" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
-        <span className="carousel-control-prev-icon text-primary" aria-hidden="true" />
+      <button className="carousel-control-prev text-primary" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="prev">
+        <span className="carousel-control-prev-icon text-primary" aria-hidden="true" ><i class="bi bi-chevron-compact-left"></i></span>
         <span className="visually-hidden">Previous</span>
       </button>
       <button className="carousel-control-next text-dark" type="button" data-bs-target="#carouselExampleInterval" data-bs-slide="next">
-        <span className="carousel-control-next-icon text-primary" aria-hidden="true" />
+        <span className="carousel-control-next-icon text-primary" aria-hidden="true" ><i class="bi bi-chevron-compact-right"></i></span>
         <span className="visually-hidden">Next</span>
       </button>
     </div>
