@@ -8,6 +8,7 @@ function Contact() {
     name: '',
     email: '',
     subject: '',
+    phone: '',
     message: ''
   });
 
@@ -82,8 +83,34 @@ function Contact() {
                 placeholder="Your Email" />
                 <label htmlFor="email">Your Email</label>
               </div>
+            </div>
+            <div className="col-md-6">
+              <div className="form-floating">
+                <input 
+                type="number" 
+                name='phone' 
+                className="form-control" 
+                id="phone" 
+                onChange={handleChange}
+                value={formData.phone} 
+                
+                placeholder="Phone number(include country code)" />
+                <label htmlFor="email">Phone Number</label>
+              </div>
+            </div>
+            <div className='col-md-6'>
+              <div className="form-floating">
+              <select class="form-select text-secondary" aria-label="Default select example">
+                <option selected>Appropriate time to reach out</option>
+                <option value="1">Morning</option>
+                <option value="2">Afternoon</option>
+                <option value="3">Evening</option>
+              </select>
+              </div>
+              {/* <div className="form-floating dropdown form-control">
+                
 
-              
+              </div> */}
             </div>
             <div className="col-12">
               <div className="form-floating">

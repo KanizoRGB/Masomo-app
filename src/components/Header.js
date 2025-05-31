@@ -26,9 +26,9 @@ function Header() {
         <NavLink to="/about" className="nav-item nav-link">About</NavLink>
         <NavLink to="/services" className="nav-item nav-link">Services</NavLink>
         <NavLink to="/blogs" className="nav-item nav-link">Blogs</NavLink>
-        <NavLink to="/contact" className="nav-item nav-link">Contact</NavLink>
+        <NavLink to="/scholarships" className="nav-item nav-link">Scholarships</NavLink>
       </div>
-      <a href className="btn btn-light rounded-pill py-2 px-4 ms-lg-5" style={{color:"rgb(56, 77, 125);"}}>Apply Now</a>
+      <NavLink to="/contact" className="btn btn-light rounded-pill py-2 px-4 ms-lg-5" style={{color:"rgb(56, 77, 125);"}}>Book Now</NavLink>
     </div>
   </nav>
   {/* <div className="container-xxl bg-primary hero-header">
