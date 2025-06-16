@@ -6,14 +6,25 @@ function Responses() {
     const [contacts, setContacts] = useState([]);
     useEffect(() => {
     const fetchContacts = async () => {
+      const token = localStorage.getItem('token');
+      
+
+      if (!token) {
+      console.warn('No token found. User might not be logged in.');
+      return;
+    }
+
+      console.log('Fetching contacts with token:', token);
+
       try {
         const res = await axios.get('http://localhost:5000/api/contacts',
           {
             headers: {
-              Authorization: `Bearer ${localStorage.getItem('token')}`
+              Authorization: `Bearer ${token}`
             }
           }
         );
+        console.log('Contacts fetched:', res.data);
         setContacts(res.data);
       } catch (err) {
         console.error('Error fetching contacts:', err);
@@ -31,8 +42,11 @@ function Responses() {
             <th>Name</th>
             <th>Email</th>
             <th>Message</th>
+            <th>Phone</th>
+            <th>Time to reach out</th>
             <th>Subject</th>
             <th>Date Submitted</th>
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>
@@ -41,8 +55,24 @@ function Responses() {
               <td>{contact.name}</td>
               <td>{contact.email}</td>
               <td>{contact.message}</td>
+              <td>{contact.phone}</td>
+              <td>{contact.time}</td>
               <td>{contact.subject}</td>
               <td>{new Date(contact.date).toLocaleString()}</td>
+              <td>
+                <button className="btn btn-danger" onClick={async () => {
+                  try {
+                    await axios.delete(`http://localhost:5000/api/contacts/${contact._id}`, {
+                      headers: {
+                        Authorization: `Bearer ${localStorage.getItem('token')}`
+                      }
+                    });
+                    setContacts(contacts.filter(c => c._id !== contact._id));
+                  } catch (err) {
+                    console.error('Error deleting contact:', err);
+                  }
+                }}>Delete</button>
+              </td>
             </tr>
           ))}
         </tbody>

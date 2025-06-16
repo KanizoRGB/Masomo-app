@@ -7,8 +7,9 @@ function Contact() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
     phone: '',
+    time: '',
+    subject: '',
     message: ''
   });
 
@@ -29,7 +30,7 @@ function Contact() {
     try {
       await axios.post('http://localhost:5000/api/contact', formData);
       alert('Message sent!');
-      setFormData({ name: '', email: '',subject:'', message: '' });
+      setFormData({ name: '', email: '',subject:'',phone:'',time:'', message: '' });
     } catch (error) {
       alert('Error sending message');
       console.error(error);
@@ -100,11 +101,16 @@ function Contact() {
             </div>
             <div className='col-md-6'>
               <div className="form-floating">
-              <select class="form-select text-secondary" aria-label="Default select example">
+              <select class="form-select text-secondary" 
+              aria-label="Default select example" 
+              name='time' 
+              id="time" 
+              onChange={handleChange} 
+              value={formData.time}>
                 <option selected>Appropriate time to reach out</option>
-                <option value="1">Morning</option>
-                <option value="2">Afternoon</option>
-                <option value="3">Evening</option>
+                <option value="Morning">Morning</option>
+                <option value="Afternoon">Afternoon</option>
+                <option value="Evening">Evening</option>
               </select>
               </div>
               {/* <div className="form-floating dropdown form-control">

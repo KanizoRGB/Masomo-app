@@ -1,10 +1,28 @@
 // import { Carousel } from 'bootstrap';
 import React from 'react'
 import Carousel from 'react-bootstrap/Carousel';
+import { Link, NavLink } from 'react-router-dom';
 
 function Services() {
   return (
     <div>
+
+      <div style={{
+        width: "100%",
+        background: "#f8b920",
+        color: "#222",
+        fontWeight: "bold",
+        fontSize: "1.1rem",
+        padding: "8px 0",
+        overflow: "hidden",
+        whiteSpace: "nowrap",
+        position: "relative",
+        marginBottom: "20px"
+      }}>
+        <marquee behavior="scroll" direction="left" scrollamount="6">
+          Currently Active Programme: Undergraduate Scholarships for September 2025 Intake – Apply Now!
+        </marquee>
+      </div>
 
         {/* Service Start */}
   <div className="container-xxl py-6">
@@ -20,9 +38,9 @@ function Services() {
               <div className="service-icon">
                 <i className="fa fa-user-tie fa-2x" />
               </div>
-              <a className="service-btn" href>
+              <Link className="service-btn" to="/contact">
                 <i className="fa fa-link fa-2x" />
-              </a>
+              </Link>
             </div>
             <div className="p-5">
               <h5 className="mb-3">Application assistance</h5>
@@ -36,9 +54,9 @@ function Services() {
               <div className="service-icon">
                 <i className="fa fa-chart-pie fa-2x" />
               </div>
-              <a className="service-btn" href>
+              <Link className="service-btn" to="/contact">
                 <i className="fa fa-link fa-2x" />
-              </a>
+              </Link>
             </div>
             <div className="p-5">
               <h5 className="mb-3">Accomodation Support</h5>
@@ -52,9 +70,9 @@ function Services() {
               <div className="service-icon">
                 <i className="fa fa-chart-line fa-2x" />
               </div>
-              <a className="service-btn" href>
+              <Link className="service-btn" to="/contact">
                 <i className="fa fa-link fa-2x" />
-              </a>
+              </Link>
             </div>
             <div className="p-5">
               <h5 className="mb-3">Language Test Preparation</h5>
@@ -68,9 +86,9 @@ function Services() {
               <div className="service-icon">
                 <i className="fa fa-chart-area fa-2x" />
               </div>
-              <a className="service-btn" href>
+              <Link className="service-btn" to="/contact">
                 <i className="fa fa-link fa-2x" />
-              </a>
+              </Link>
             </div>
             <div className="p-5">
               <h5 className="mb-3">University & Course Selection Guidance</h5>
@@ -84,9 +102,9 @@ function Services() {
               <div className="service-icon">
                 <i className="fa fa-balance-scale fa-2x" />
               </div>
-              <a className="service-btn" href>
+              <Link className="service-btn" to="/contact">
                 <i className="fa fa-link fa-2x" />
-              </a>
+              </Link>
             </div>
             <div className="p-5">
               <h5 className="mb-3">Visa Counseling</h5>
@@ -100,13 +118,29 @@ function Services() {
               <div className="service-icon">
                 <i className="fa fa-house-damage fa-2x" />
               </div>
-              <a className="service-btn" href>
+              <Link className="service-btn" to="/contact">
                 <i className="fa fa-link fa-2x" />
-              </a>
+              </Link>
             </div>
             <div className="p-5">
               <h5 className="mb-3">Scholarship & Funding Advice</h5>
               <span>Assist students in identifying and applying for scholarships, grants, and other funding opportunities.</span>
+            </div>
+          </div>
+        </div>
+        <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.9s">
+          <div className="service-item rounded h-100">
+            <div className="d-flex justify-content-between">
+              <div className="service-icon">
+                <i className="fa fa-laptop fa-2x" />
+              </div>
+              <Link className="service-btn" to="/contact">
+                <i className="fa fa-link fa-2x" />
+              </Link>
+            </div>
+            <div className="p-5">
+              <h5 className="mb-3">Online Academy</h5>
+              <span>Access interactive online courses, webinars, and workshops designed to enhance academic skills and prepare for international studies.</span>
             </div>
           </div>
         </div>
@@ -131,27 +165,27 @@ function Services() {
       <div className="carousel-inner">
         <div className="carousel-item active" data-bs-interval={5000}>
           <div className='d-flex justify-content-center'>
-            <img src="img/testimonial-1.jpg" className="rounded-circle" alt="..." />
-            <h3 className='pt-4 mb-0'> Myra Smith</h3>
+            <img src="img/testimonial-1.jpg" className="rounded-circle me-2" alt="..." />
+            <h3 className='pt-4 mb-0'> Faith W.</h3>
           </div>
-          <h3>Occupation Therapist 1</h3>
+          <h3>Canada</h3>
           <p>Taraji Masomo Care provided me with exceptional support throughout my study abroad journey. Their team was knowledgeable, responsive, and genuinely cared about my success. I couldn't have done it without them!</p>
         </div>
         <div className="carousel-item " data-bs-interval={5000}>
           <div className='d-flex justify-content-center'>
-            <img src="img/testimonial-2.jpg" className="rounded-circle" alt="..." />
-            <h3 className='pt-4 mb-0'> Myra Smith</h3>
+            <img src="img/testimonial-2.jpg" className="rounded-circle me-2" alt="..." />
+            <h3 className='pt-4 mb-0'> Brian M.</h3>
           </div>
-          <h3>Occupation Therapist 2</h3>
-          <p>Taraji Masomo Care provided me with exceptional support throughout my study abroad journey. Their team was knowledgeable, responsive, and genuinely cared about my success. I couldn't have done it without them!</p>
+          <h3>University of Manchester</h3>
+          <p>"Taraji Masomo changed the course of my life. I had almost given up on studying abroad, but their guidance helped me land a full scholarship to the University of Toronto. They walked with me every step — from the application to the visa process. I’ll forever be grateful!"</p>
         </div>
         <div className="carousel-item " data-bs-interval={5000}>
           <div className='d-flex justify-content-center'>
-            <img src="img/testimonial-3.jpg" className="rounded-circle" alt="..." />
-            <h3 className='pt-4 mb-0'> Myra Smith</h3>
+            <img src="img/african_girl.jpg" className="rounded-circle me-2" style={{width:"100px", height:"100px"}} alt="..." />
+            <h3 className='pt-4 mb-0'> Naomi K.</h3>
           </div>
-          <h3>Occupation Therapist 3</h3>
-          <p>Taraji Masomo Care provided me with exceptional support throughout my study abroad journey. Their team was knowledgeable, responsive, and genuinely cared about my success. I couldn't have done it without them!</p>
+          <h3>Australia</h3>
+          <p>"The team at Taraji Masomo made the entire scholarship application process feel easy. Their support helped me secure funding at a top university in the UK. I highly recommend them to any student dreaming big!"</p>
         </div>
        
       </div>

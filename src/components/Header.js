@@ -11,7 +11,7 @@ function Header() {
 <div className="container-xxl position-relative p-0">
   <nav className="navbar navbar-expand-lg navbar-light px-4 px-lg-5 py-3 py-lg-0" style={{backgroundColor: "rgb(56, 77, 125)"}}>
     <Link to="/" className="navbar-brand p-0">
-      <h1 className="m-0">Taraji Masomo</h1>
+      <h1 className="m-0">Taraji Masomo Care</h1>
     </Link>
     {/* <a href="index.html" className="navbar-brand p-0">
       <h1 className="m-0">Taraji Masomo</h1>
@@ -27,6 +27,16 @@ function Header() {
         <NavLink to="/services" className="nav-item nav-link">Services</NavLink>
         <NavLink to="/blogs" className="nav-item nav-link">Blogs</NavLink>
         <NavLink to="/scholarships" className="nav-item nav-link">Scholarships</NavLink>
+        <div className="nav-item dropdown">
+            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">More</a>
+            <div class="dropdown-menu m-0">
+                <Link to="/impact" class="dropdown-item">Social Impact</Link>
+                <Link to="/contact" class="dropdown-item">Partner with us</Link>
+                {/* <a href="team.html" class="dropdown-item">Our Team</a>
+                <a href="testimonial.html" class="dropdown-item">Testimonial</a>
+                <a href="404.html" class="dropdown-item">404 Page</a> */}
+            </div>
+        </div>
       </div>
       <NavLink to="/contact" className="btn btn-light rounded-pill py-2 px-4 ms-lg-5" style={{color:"rgb(56, 77, 125);"}}>Book Now</NavLink>
     </div>

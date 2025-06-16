@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Link}from 'react-router-dom';
 function About() {
   return (
     <div>
@@ -38,7 +38,7 @@ function About() {
               </div>
             </div>
           </div>
-          <a className="btn btn-primary rounded-pill py-3 px-5 mt-2" href style={{backgroundColor:"rgb(56, 77, 125)"}}>Read More</a>
+          <Link to="/services" className="btn btn-primary rounded-pill py-3 px-5 mt-2" href style={{backgroundColor:"rgb(56, 77, 125)"}}>Read More</Link>
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
 import React from 'react'
-
+import {Outlet,Link} from 'react-router-dom'
 
 function Adminpanel() {
   return (
@@ -8,10 +8,14 @@ function Adminpanel() {
       <p className='text-center'>This is the admin panel. You can manage your website from here.</p>
       <p className='text-center'>You can view the contact submissions by clicking on the button below.</p>
       <div className='text-center'>
-        <button className='btn btn-primary' onClick={() => window.location.href = '/responses'}>View Contact Submissions</button>
-        <button className='btn btn-secondary ms-3' onClick={() => window.location.href = '/scholarships'}>View Scholarships</button>
-        <button className='btn btn-success ms-3' onClick={() => window.location.href = '/blogs'}>View Blogs</button>
+        <Link className='btn btn-primary' to="responses" >View Contact Submissions</Link>
+        <Link className='btn btn-secondary ms-3' to="courselist" >View Course List</Link>
+        <Link className='btn btn-success ms-3' to="blogs">View Blogs</Link>
       </div>
+
+      <main>
+        <Outlet />
+      </main>
       
     </div>
   )

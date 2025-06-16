@@ -21,7 +21,8 @@ app.use(bodyParser.json());
 // MongoDB connection
 //Url for cloud MongoDB Atlas 'mongodb+srv://<db_username>:<db_password>@cluster0.aknj2.mongodb.net/contactform?retryWrites=true&w=majority'
 // For local MongoDB use 'mongodb://localhost:27017/contactform'
-mongoose.connect('mongodb+srv://tarajimasomo:ywLgC0MI3KD6yGy6@cluster0.aknj2.mongodb.net/contactform', {
+//For cloud use mongodb+srv://tarajimasomo:ywLgC0MI3KD6yGy6@cluster0.aknj2.mongodb.net/contactform
+mongoose.connect('mongodb://localhost:27017/contactform', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => console.log('MongoDB connected'))
@@ -32,6 +33,8 @@ const contactSchema = new mongoose.Schema({
   name: String,
   email: String,
   subject: String,
+  phone: Number,
+  time: String,
   message: String,
   // Add a date field to store the submission date
   date: { 
@@ -87,6 +90,8 @@ app.post('/api/register', async (req, res) => {
   });
 
   app.post('/api/login', async (req, res) => {
+
+    console.log('Login request received:', req.body);
   const { email, password } = req.body;
   try {
     const user = await User.findOne({ email });
@@ -97,8 +102,11 @@ app.post('/api/register', async (req, res) => {
       res.status(400).json(message = 'Invalid credentials');
     }
     else {
+
+      //Create a JWT token
+      // console.log('User found:', user);
       const token = jwt.sign({ id: user._id }, 'your_jwt_secret', { expiresIn: '1h' });
-      res.status(200).json({ message: 'Login successful', user: { username: user.username, email: user.email } });
+      res.status(200).json({ message: 'Login successful',token, user: { username: user.username, email: user.email } });
     }
   } catch (error) {
     console.error(error);
@@ -108,10 +116,15 @@ app.post('/api/register', async (req, res) => {
 
 // Middleware to protect routes
 const authenticate = (req, res, next) => {
-  const token = req.headers['authorization'];
-  if (!token) {
+  const authHeader = req.headers['authorization'];
+  // console.log('Token:', token);
+  // console.log(token);
+  if (!authHeader) {
     return res.status(401).json({ message: 'No token provided' });
   }
+
+
+  const token = authHeader.split(' ')[1]; // Assuming the format
   jwt.verify(token, 'your_jwt_secret', (err, decoded) => {
     if (err) {
       return res.status(500).json({ message: 'Failed to authenticate token' });
@@ -126,12 +139,14 @@ const authenticate = (req, res, next) => {
 
 // Define a route to handle form submissions
 app.post('/api/contact', async (req, res) => {
-  const { name, email, subject, message } = req.body;
+  const { name, email,phone,time, subject, message } = req.body;
 
   // Create a new contact form entry
   const newContact = new Contact({
     name,
     email,
+    phone,
+    time,
     subject,
     message
   });
@@ -146,7 +161,7 @@ app.post('/api/contact', async (req, res) => {
 });
 
 //Define a route to get all form submissions
-app.get('/api/contacts',authenticate, async (req, res) => {
+app.get('/api/contacts',authenticate,async (req, res) => {
   try {
     const contacts = await Contact.find().sort({ date: -1 }); // Sort by date in descending order
     // You can also limit the number of contacts returned if needed
@@ -187,6 +202,39 @@ app.get('/api/courses', async (req, res) => {
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: 'Error fetching courses' });
+  }
+});
+
+//Define a route to delete a course
+app.delete('/api/courses/:id', async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const course = await Course.findByIdAndDelete(id);
+    if (!course) {
+      return res.status(404).json({ message: 'Course not found' });
+    }
+    res.status(200).json({ message: 'Course deleted successfully' });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Error deleting course' });
+  }
+});
+
+
+//Define a route to delete a contact
+app.delete('/api/contacts/:id', authenticate, async (req, res) => {
+  const { id } = req.params;
+
+  try {
+    const contact = await Contact.findByIdAndDelete(id);
+    if (!contact) {
+      return res.status(404).json({ message: 'Contact not found' });
+    }
+    res.status(200).json({ message: 'Contact deleted successfully' });
+  } catch (error) {
+    console.error(error);
+    res.status(500).json({ message: 'Error deleting contact' });
   }
 });
 
