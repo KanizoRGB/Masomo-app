@@ -16,6 +16,7 @@ import CourseList from './pages/CourseList';
 import Impact from './pages/Impact';
 import Partner from './pages/Partner';
 import Blogview from './pages/Blogview';
+import Careers from './pages/Careers';
 import { BrowserRouter as Router,Route,Routes, Navigate } from 'react-router-dom';
 // import { useState } from 'react';
 
@@ -65,6 +66,8 @@ function App() {
           <Route path="/impact" element={<Impact />} />
           <Route path="/partner" element={<Partner />} />
           <Route path="/blogview/:id" element={<Blogview />} />
+          <Route path="/careers" element={<Careers />} />
+          {/* <Route path="/courses" element={<Courses />} /> */}
 
 
           <Route path="/login" element={<Login onLogin={handleLogin} />} />

@@ -20,7 +20,7 @@ function Scholarships() {
                   setLoading(true);
                   // Simulate API call
                   try {
-                    const response = await fetch('http://localhost:5000/api/courses');
+                    const response = await fetch('http://api.tarajimasomo.co.ke/api/courses');
                     console.log(response);
                     const data = await response.json();
                     const filtered = data.filter(course =>

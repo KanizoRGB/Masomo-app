@@ -17,7 +17,7 @@ function Responses() {
       console.log('Fetching contacts with token:', token);
 
       try {
-        const res = await axios.get('http://localhost:5000/api/contacts',
+        const res = await axios.get('http://api.tarajimasomo.co.ke/api/contacts',
           {
             headers: {
               Authorization: `Bearer ${token}`
@@ -62,7 +62,7 @@ function Responses() {
               <td>
                 <button className="btn btn-danger" onClick={async () => {
                   try {
-                    await axios.delete(`http://localhost:5000/api/contacts/${contact._id}`, {
+                    await axios.delete(`http://api.tarajimasomo.co.ke/api/contacts/${contact._id}`, {
                       headers: {
                         Authorization: `Bearer ${localStorage.getItem('token')}`
                       }

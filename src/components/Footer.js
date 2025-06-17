@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 function Footer() {
   return (
@@ -22,19 +23,19 @@ function Footer() {
       </div>
       <div className="col-md-6 col-lg-3">
         <h5 className="text-white mb-4">Quick Link</h5>
-        <a className="btn btn-link" href>About Us</a>
-        <a className="btn btn-link" href>Contact Us</a>
-        <a className="btn btn-link" href>Privacy Policy</a>
-        <a className="btn btn-link" href>Terms &amp; Condition</a>
-        <a className="btn btn-link" href>Career</a>
+        <Link className="btn btn-link" href>About Us</Link>
+        <Link className="btn btn-link" href>Contact Us</Link>
+        <Link className="btn btn-link" href>Privacy Policy</Link>
+        <Link className="btn btn-link" href>Terms &amp; Condition</Link>
+        <Link className="btn btn-link" href>Career</Link>
       </div>
       <div className="col-md-6 col-lg-3">
         <h5 className="text-white mb-4">Popular Link</h5>
-        <a className="btn btn-link" href>About Us</a>
-        <a className="btn btn-link" href>Contact Us</a>
-        <a className="btn btn-link" href>Privacy Policy</a>
-        <a className="btn btn-link" href>Terms &amp; Condition</a>
-        <a className="btn btn-link" href>Career</a>
+        <Link className="btn btn-link" href>About Us</Link>
+        <Link className="btn btn-link" href>Contact Us</Link>
+        <Link className="btn btn-link" href>Privacy Policy</Link>
+        <Link className="btn btn-link" href>Terms &amp; Condition</Link>
+        <Link className="btn btn-link" href>Career</Link>
       </div>
       <div className="col-md-6 col-lg-3">
         <h5 className="text-white mb-4">Newsletter</h5>

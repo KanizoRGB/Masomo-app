@@ -22,7 +22,7 @@ app.use(bodyParser.json());
 //Url for cloud MongoDB Atlas 'mongodb+srv://<db_username>:<db_password>@cluster0.aknj2.mongodb.net/contactform?retryWrites=true&w=majority'
 // For local MongoDB use 'mongodb://localhost:27017/contactform'
 //For cloud use mongodb+srv://tarajimasomo:ywLgC0MI3KD6yGy6@cluster0.aknj2.mongodb.net/contactform
-mongoose.connect('mongodb://localhost:27017/contactform', {
+mongoose.connect('mongodb+srv://tarajimasomo:ywLgC0MI3KD6yGy6@cluster0.aknj2.mongodb.net/contactform', {
   useNewUrlParser: true,
   useUnifiedTopology: true
 }).then(() => console.log('MongoDB connected'))

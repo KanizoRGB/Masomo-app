@@ -14,7 +14,7 @@ function CourseList() {
         useEffect(() => {
             const fetchCourses = async () => {
                 try {
-                    const response = await axios.get('http://localhost:5000/api/courses');
+                    const response = await axios.get('http://api.tarajimasomo.co.ke/api/courses');
                     setCourses(response.data);
                 } catch (err) {
                     setError('Failed to fetch courses');
@@ -31,7 +31,7 @@ const handleDelete = async (id) => {
     
     if (!window.confirm('Are you sure you want to delete this course?')) return;
     try {
-        await axios.delete(`http://localhost:5000/api/courses/${id}`);
+        await axios.delete(`http://api.tarajimasomo.co.ke/api/courses/${id}`);
         setCourses(courses.filter(course => course.id !== id));
     } catch (err) {
         setError('Failed to delete course');
@@ -70,7 +70,7 @@ return (
                             <td>{course.level}</td>
                             <td>${course.fees}</td>
                             <td>
-                                <button className="btn btn-sm btn-primary me-2">Edit</button>
+                                {/* <button className="btn btn-sm btn-primary me-2">Edit</button> */}
                                 <button
                                     className="btn btn-sm btn-danger"
                                     onClick={() => handleDelete(course._id).then(() => window.location.reload())}
