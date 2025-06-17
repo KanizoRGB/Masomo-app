@@ -10,7 +10,7 @@ const Login = ({ onLogin }) => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post('http://localhost:5000/api/login', { email, password });
+      const res = await axios.post('https://api.tarajimasomo.co.ke/api/login', { email, password });
       localStorage.setItem('token', res.data.token);
       onLogin(); 
       // redirect after login

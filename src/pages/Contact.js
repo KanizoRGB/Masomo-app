@@ -28,7 +28,7 @@ function Contact() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post('http://localhost:5000/api/contact', formData);
+      await axios.post('https://api.tarajimasomo.co.ke/api/contact', formData);
       alert('Message sent!');
       setFormData({ name: '', email: '',subject:'',phone:'',time:'', message: '' });
     } catch (error) {

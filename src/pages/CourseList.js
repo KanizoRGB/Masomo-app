@@ -14,7 +14,7 @@ function CourseList() {
         useEffect(() => {
             const fetchCourses = async () => {
                 try {
-                    const response = await axios.get('http://api.tarajimasomo.co.ke/api/courses');
+                    const response = await axios.get('https://api.tarajimasomo.co.ke/api/courses');
                     setCourses(response.data);
                 } catch (err) {
                     setError('Failed to fetch courses');
@@ -31,7 +31,7 @@ const handleDelete = async (id) => {
     
     if (!window.confirm('Are you sure you want to delete this course?')) return;
     try {
-        await axios.delete(`http://api.tarajimasomo.co.ke/api/courses/${id}`);
+        await axios.delete(`https://api.tarajimasomo.co.ke/api/courses/${id}`);
         setCourses(courses.filter(course => course.id !== id));
     } catch (err) {
         setError('Failed to delete course');
