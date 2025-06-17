@@ -23,7 +23,7 @@ function Courses() {
     e.preventDefault();
     // Replace with your actual API call
     try{
-        await axios.post('http://localhost:5000/api/courses', formData);
+        await axios.post('https://api.tarajimasomo.co.ke/api/courses', formData);
         alert('Course submitted successfully!');
         setFormData({ title: '', country: '', level: '', fees: '' }); // Reset form
 
