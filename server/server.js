@@ -15,7 +15,13 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 // Middle ware
-app.use(cors());
+app.use(cors(
+  {
+    origin: ['http://localhost:3000','https://tarajimasomo.co.ke','https://masomo-app-gamma.vercel.app/'], // Replace with your frontend URL
+    methods: ['GET', 'POST', 'PUT', 'DELETE'],
+    credentials: true // Allow credentials if needed
+  }
+));
 app.use(bodyParser.json());
 
 // MongoDB connection
