@@ -21,6 +21,7 @@ function Scholarships() {
                   // Simulate API call
                   try {
                     const response = await fetch('http://localhost:5000/api/courses');
+                    console.log(response);
                     const data = await response.json();
                     const filtered = data.filter(course =>
                       (!searchParams.country || course.country.toLowerCase().includes(searchParams.country.toLowerCase())) &&
@@ -80,9 +81,9 @@ function Scholarships() {
                 onChange={handleInputChange}
                 >
                 <option selected>Level</option>
-                <option value="1">Diploma</option>
-                <option value="2">Undergraduate</option>
-                <option value="3">Post graduate</option>
+                <option value="Diploma">Diploma</option>
+                <option value="Undergraduate">Undergraduate</option>
+                <option value="Postgraduate">Post graduate</option>
               </select>
             </div >
             <div style={{width:"30%"}} className='d-flex flex-row justify-content-between align-items-center'>
