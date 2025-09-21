@@ -220,7 +220,7 @@
 
 /*** Hero Header ***/
 .hero-header {
-    margin-bottom: 6rem;
+    margin-bottom: 0px;
     padding: 12rem 0 9rem 0;
     background: url(../img/shape-bottom.png) center bottom no-repeat;
 }

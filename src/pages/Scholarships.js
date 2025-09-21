@@ -83,7 +83,8 @@ function Scholarships() {
                 <option selected>Level</option>
                 <option value="Diploma">Diploma</option>
                 <option value="Undergraduate">Undergraduate</option>
-                <option value="Postgraduate">Post graduate</option>
+                <option value="Masters">Masters</option>
+                <option value="PhD">PhD</option>
               </select>
             </div >
             <div style={{width:"30%"}} className='d-flex flex-row justify-content-between align-items-center'>

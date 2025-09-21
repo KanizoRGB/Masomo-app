@@ -1,0 +1,22 @@
+.glossy-box {
+  background: linear-gradient(
+    to bottom,
+    rgba(26, 26, 26, 0.6),
+    rgba(13, 13, 13, 0.6)
+  ); /* dark gradient */
+  border: 1px solid #333; /* subtle border */
+  /* border-radius: 8px; */
+  box-shadow: inset 0 1px rgba(255, 255, 255, 0.2), /* inner shine */
+              0 4px 10px rgba(0, 0, 0, 0.5); /* drop shadow */
+  padding: 20px;
+  margin-left: 20px;
+  color: #fff; /* makes text stand out */
+  /* width: fit-content; */
+}
+
+/* .hero-image {
+              background-image: url('/img/university_background.jpg');
+              background-size: cover;
+              background-position: center;
+              background-repeat: no-repeat;
+} */

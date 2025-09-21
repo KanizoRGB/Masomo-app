@@ -64,7 +64,7 @@ function Responses() {
               <td>
                 <button className="btn btn-danger" onClick={async () => {
                   try {
-                    await axios.delete(`http://api.tarajimasomo.co.ke/api/contacts/${contact._id}`, {
+                    await axios.delete(`https://api.tarajimasomo.co.ke/api/contacts/${contact._id}`, {
                       headers: {
                         Authorization: `Bearer ${localStorage.getItem('token')}`
                       }

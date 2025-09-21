@@ -14,7 +14,7 @@ function CourseList() {
         useEffect(() => {
             const fetchCourses = async () => {
                 try {
-                    const response = await axios.get('http://api.tarajimasomo.co.ke/api/courses');
+                    const response = await axios.get('https://api.tarajimasomo.co.ke/api/courses');
                     setCourses(response.data);
                 } catch (err) {
                     setError('Failed to fetch courses');

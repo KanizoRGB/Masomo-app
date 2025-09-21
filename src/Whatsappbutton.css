@@ -1,0 +1,47 @@
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366; /* WhatsApp green */
+  border-radius: 50%;
+  padding: 12px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Hover grow effect */
+.whatsapp-float:hover {
+  transform: scale(1.1);
+}
+
+/* Add pulsing (beeping) effect */
+.whatsapp-float::before {
+  content: "";
+  position: absolute;
+  width: 100px;  /* slightly larger than the button */
+  height: 100px;
+  border-radius: 50%;
+  background-color: rgba(37, 211, 102, 0.5); /* WhatsApp green glow */
+  animation: pulse 1.5s infinite;
+  z-index: -1; /* behind the button */
+}
+
+/* Keyframes for pulse animation */
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    opacity: 0.7;
+  }
+  70% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+}

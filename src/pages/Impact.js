@@ -6,8 +6,9 @@ function Impact() {
         <section style={{ background: '#f5f7fa', padding: '2rem 0' }} className="wow fadeInUp" data-wow-delay="0.1s">
             <div style={{ maxWidth: 900, margin: '0 auto', padding: '0 1rem' }}>
                 <h1 style={{ color: '#1a237e', textAlign: 'center', marginBottom: '1.5rem' }}>
-                    Our Social Impact
+                    Social Impact
                 </h1>
+                <h1 style={{color:"#1a237e"}}>(TARAJI FOUNDATION)</h1>
                 <p style={{ color: '#333', textAlign: 'center', marginBottom: '2.5rem', fontSize: '1.15rem' }}>
                     At Taraji Masomo, we are committed to making a positive difference in our community. Here are some of the ways we are impacting society:
                 </p>

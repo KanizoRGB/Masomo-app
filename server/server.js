@@ -63,6 +63,7 @@ const userSchema = new mongoose.Schema({
   
 });
 
+
 // Create a model for the users
 const User = mongoose.model('User', userSchema);
 
@@ -73,6 +74,20 @@ const courseSchema = new mongoose.Schema({
   level: String,
   fees: Number,
 });
+
+
+
+// Create a model for the courses
+const Course = mongoose.model('Course', courseSchema);
+
+
+//Define a schema for capturing emails
+const emailSchema = new mongoose.Schema({
+  email: {type: String, unique: true}
+});
+
+// Create a model for the emails
+const Email = mongoose.model('Email', emailSchema);
 
 
 // Middleware to protect routes
@@ -94,9 +109,6 @@ const authenticate = (req, res, next) => {
     next();
   });
 };
-
-// Create a model for the courses
-const Course = mongoose.model('Course', courseSchema);
 
 //Route to handle user registration
 app.post('/api/register', authenticate, async (req, res) => {
@@ -247,6 +259,23 @@ app.delete('/api/contacts/:id', authenticate, async (req, res) => {
   } catch (error) {
     console.error(error);
     res.status(500).json({ message: 'Error deleting contact' });
+  }
+});
+
+//Define a route to capture emails
+app.post('/api/emails', async(req,res)=>{
+  try{
+    const {email} = req.body;
+    console.log("Email captured:", email);
+
+    // Create a new email entry
+    const newEmail = new Email({email});
+    await newEmail.save();
+    res.status(200).json({message: 'Email captured successfully'});
+  }catch(error){
+    console.error(error);
+    res.status(500).json({message: 'Error capturing email'});
+
   }
 });
 

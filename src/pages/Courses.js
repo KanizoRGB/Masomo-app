@@ -23,7 +23,7 @@ function Courses() {
     e.preventDefault();
     // Replace with your actual API call
     try{
-        await axios.post('http://localhost:5000/api/courses', formData);
+        await axios.post('https://api.tarajimasomo.co.ke/api/courses', formData);
         alert('Course submitted successfully!');
         setFormData({ title: '', country: '', level: '', fees: '' }); // Reset form
 
@@ -78,7 +78,8 @@ function Courses() {
             <option value="">-- Select Level --</option>
             <option value="Diploma">Diploma</option>
             <option value="Undergraduate">Undergraduate</option>
-            <option value="Postgraduate">Postgraduate</option>
+            <option value="Masters">Masters</option>
+            <option value="PhD">PhD</option>
           </select>
         </div>
 
@@ -90,7 +91,7 @@ function Courses() {
             className="form-control"
             id="fees"
             name="fees"
-            placeholder='Enter School Fees (e.g., 5000)'
+            placeholder='Enter School Fees in dollars(e.g., 5000)'
             min="0"
             step="0.01"
             value={formData.fees}

@@ -20,7 +20,7 @@ function Services() {
         marginBottom: "20px"
       }}>
         <marquee behavior="scroll" direction="left" scrollamount="6">
-          Currently Active Programme: Undergraduate Scholarships for September 2025 Intake – Apply Now!
+          Currently Active Programme: Undergraduate Scholarships for January 2026 Intake – Apply Now!
         </marquee>
       </div>
 
@@ -36,74 +36,104 @@ function Services() {
                   {
                     icon: "fa-user-tie",
                     title: "Application assistance",
-                    desc: "Support in filling out university applications, compiling required documents, and meeting deadlin"
+                    desc: "Support in filling out university applications, compiling required documents, and meeting deadlines. ",
+                    image: "img/application_assistance.jpg"
                   },
                   {
                     icon: "fa-chart-pie",
                     title: "Accomodation Support",
-                    desc: "Help students find and book student housing or hostels in their destination country."
+                    desc: "Help students find and book student housing or hostels in their destination country.",
+                    image: "img/accomodation.jpg"
                   },
                   {
                     icon: "fa-chart-line",
-                    title: "Language Test Preparation",
-                    desc: "Coaching or resources for IELTS, TOEFL, PTE, or other language proficiency tests required by universities."
+                    title: "Language Lab Academy",
+                    desc: "Coaching or resources for IELTS, TOEFL, and local language dialects e.g Kikuyu, Luo, Luhya, Maasai.",
+                    image: "img/language_lab.jpg"
                   },
                   {
                     icon: "fa-chart-area",
                     title: "University & Course Selection Guidance",
-                    desc: "Help students choose the right university and course based on their academic background, interests, and career goals."
+                    desc: "Help students choose the right university and course based on their academic background, interests, and career goals.",
+                    image: "img/selection.jpg"
                   },
                   {
                     icon: "fa-balance-scale",
                     title: "Visa Counseling",
-                    desc: "Step-by-step guidance for student visa applications including document checklists, interview preparation, and submission help."
+                    desc: "Step-by-step guidance for visa applications including document checklists, interview preparation, and submission help.",
+                    image: "img/visa_application.jpg"
                   },
                   {
                     icon: "fa-house-damage",
                     title: "Scholarship & Funding Advice",
-                    desc: "Assist students in identifying and applying for scholarships, grants, and other funding opportunities."
+                    desc: "Assist students in identifying and applying for scholarships, grants, and other funding opportunities.",
+                    image: "img/scholarship.jpg"
+              
                   },
                   {
                     icon: "fa-laptop",
                     title: "Online Academy",
-                    desc: "Access interactive online courses, webinars, and workshops designed to enhance academic skills and prepare for international studies."
+                    desc: "Access interactive online courses, webinars, and workshops designed to enhance academic skills and prepare for international studies.",
+                    image: "img/online_studies.jpg"
                   },
                   {
                     icon: "fa-book",
                     title: "Tuition Services",
-                    desc: "Get paired with volunteer/paid tutors, subject-specific tutoring and peer-to-peer mentorship"
+                    desc: "Get paired with volunteer/paid tutors, subject-specific tutoring and peer-to-peer mentorship",
+                    image: "img/tuition.jpg"
                   },
                   {
                     icon: "fa-book",
                     title: "Library Services",
-                    desc: "Get subject-specific tutoring e.g Math,Biology,Programming, Swahile e.t.c and  a curated collection of e-books,journals, and articles"
+                    desc: "Get subject-specific tutoring e.g Math,Biology,Programming, Swahile e.t.c and  a curated collection of e-books,journals, and articles",
+                    image: "img/library.jpg"
                   }
                   ,
                   {
                     icon: "fa-briefcase",
                     title: "Internship & Attachment Placement",
-                    desc: "Connect students with internship and attachment opportunities to gain practical experience in their field of study."
+                    desc: "Connect students with internship and attachment opportunities to gain practical experience in their field of study.",
+                    image: "img/internship.jpg"
+                  }
+                  ,
+                  {
+                    icon: "fa-plane",
+                    title: "Flight Booking Assistance",
+                    desc: "Guidance and support in finding and booking affordable flights to your study destination, including travel tips and itinerary planning.",
+                    image: "img/flight.jpg"
                   }
                 ].map((service, idx) => (
                   <div className="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay={`${0.1 + 0.3 * (idx % 3)}s`} key={service.title}>
                     <Link to="/contact" style={{ textDecoration: "none", color: "inherit" }}>
-                      <div className="service-item rounded h-100" style={{ cursor: "pointer" }}>
-                        <div className="d-flex justify-content-between">
-                          <div className="service-icon">
+                      <div className="service-item rounded h-100 card" style={{ cursor: "pointer" }}>
+                        <div className="d-flex justify-content-between card-body">
+                          {/* <div className="service-icon">
                             <i className={`fa ${service.icon} fa-2x`} />
-                          </div>
-                          <span className="service-btn">
+                          </div> */}
+                          <img  style={{width:"310px", height:"163px"}} src={service.image} alt={service.title} className="img-fluid rounded"/>
+                          {/* <span className="service-btn">
                             <i className="fa fa-link fa-2x" />
-                          </span>
+                          </span> */}
                         </div>
-                        <div className="p-5">
+                        <div className="p-5 ">
                           <h5 className="mb-3">{service.title}</h5>
                           <span>{service.desc}</span>
                         </div>
                       </div>
                     </Link>
+
+                    {/* <div class="card" style={{width: "18rem", marginTop:"20px"}}>
+                      <img src="..." class="card-img-top" alt="..."/>
+                      <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card’s content.</p>
+                        <a href="#" class="btn btn-primary">Go somewhere</a>
+                      </div>
+                    </div> */}
                   </div>
+
                 ))}
+                
               </div>
             </div>
           </div>
